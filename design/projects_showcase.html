@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Projects Showcase</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=VT323&amp;family=Press+Start+2P&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "retro-bg": "#cbb29b",      // Main background (grid color base)
+                        "retro-paper": "#f6ebd8",   // Card/Surface background (light cream)
+                        "retro-dark": "#4a3b32",    // Primary text/borders (dark brown)
+                        "retro-accent": "#8c6a4e",  // Secondary brown for buttons/headers
+                        "retro-highlight": "#e5dccc", // Slightly darker paper
+                        "retro-green": "#5d8f6d",   // Success/Active
+                        "retro-red": "#b85c5c",     // Error/Offline
+                        "retro-yellow": "#dcb15c",  // Warning/WIP
+                        "retro-blue": "#5c8eb8",    // Info/Links
+                    },
+                    fontFamily: {
+                        "display": ["'Press Start 2P'", "cursive"],
+                        "mono": ["'VT323'", "monospace"],
+                        "body": ["'VT323'", "monospace"],
+                    },
+                    backgroundImage: {
+                        'grid-pattern': "linear-gradient(rgba(74, 59, 50, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(74, 59, 50, 0.1) 1px, transparent 1px)",
+                    },
+                    boxShadow: {
+                        'pixel': '4px 4px 0px 0px #4a3b32',
+                        'pixel-sm': '2px 2px 0px 0px #4a3b32',
+                        'pixel-inset': 'inset 4px 4px 0px 0px rgba(0,0,0,0.1)',
+                    }
+                },
+            },
+        }
+    </script>
+<style>::-webkit-scrollbar {
+            width: 16px;
+            background: #cbb29b;
+            border-left: 2px solid #4a3b32;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #8c6a4e;
+            border: 2px solid #4a3b32;
+            box-shadow: inset 2px 2px 0px rgba(255,255,255,0.2);
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4a3b32;
+        }.scanlines {
+            background: linear-gradient(
+                to bottom,
+                rgba(255,255,255,0),
+                rgba(255,255,255,0) 50%,
+                rgba(74,59,50,0.05) 50%,
+                rgba(74,59,50,0.05)
+            );
+            background-size: 100% 4px;
+        }.pixel-art {
+            image-rendering: pixelated;
+        }
+        .bg-grid {
+            background-color: #cbb29b;
+            background-image: 
+                linear-gradient(rgba(74, 59, 50, 0.07) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(74, 59, 50, 0.07) 1px, transparent 1px);
+            background-size: 32px 32px;
+        }::selection {
+            background: #4a3b32;
+            color: #f6ebd8;
+        }
+    </style>
+</head>
+<body class="bg-grid text-retro-dark font-mono overflow-x-hidden min-h-screen flex flex-col">
+<header class="sticky top-0 z-50 bg-retro-paper border-b-4 border-retro-dark px-4 py-3 md:px-10 shadow-pixel-sm">
+<div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<div class="size-10 bg-retro-dark flex items-center justify-center text-retro-paper font-bold border-2 border-retro-dark shadow-[inset_2px_2px_0px_rgba(255,255,255,0.2)]">
+<span class="material-symbols-outlined text-[24px]">terminal</span>
+</div>
+<h2 class="text-lg md:text-xl font-display text-retro-dark tracking-widest uppercase">RETRO_BYTES</h2>
+</div>
+<nav class="hidden md:flex flex-1 justify-center gap-8">
+<a class="text-xl font-bold hover:text-retro-accent hover:underline decoration-2 underline-offset-4 transition-colors uppercase tracking-wider" href="#">[ HOME ]</a>
+<a class="text-xl font-bold text-retro-accent decoration-retro-dark decoration-4 underline underline-offset-4 transition-colors uppercase tracking-wider" href="#">[ PROJECTS ]</a>
+<a class="text-xl font-bold hover:text-retro-accent hover:underline decoration-2 underline-offset-4 transition-colors uppercase tracking-wider" href="#">[ ABOUT ]</a>
+<a class="text-xl font-bold hover:text-retro-accent hover:underline decoration-2 underline-offset-4 transition-colors uppercase tracking-wider" href="#">[ RESUME ]</a>
+</nav>
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center w-10 h-10 bg-retro-paper border-2 border-retro-dark text-retro-dark shadow-pixel-sm" title="Connection Status">
+<span class="material-symbols-outlined">wifi</span>
+</div>
+<div class="flex items-center justify-center w-10 h-10 bg-retro-paper border-2 border-retro-dark text-retro-green shadow-pixel-sm" title="Battery Status">
+<span class="material-symbols-outlined">battery_full</span>
+</div>
+<div class="flex items-center justify-center px-3 h-10 bg-retro-dark border-2 border-retro-dark text-retro-paper font-mono text-lg font-bold shadow-pixel-sm">
+                    14:02 PM
+                </div>
+</div>
+</div>
+</header>
+<main class="flex-grow flex flex-col items-center px-4 py-8 md:px-8">
+<div class="w-full max-w-7xl flex flex-col gap-8">
+<div class="border-4 border-retro-dark bg-retro-paper p-1 shadow-pixel">
+<div class="bg-retro-paper border-2 border-retro-dark border-dashed p-8 text-center relative overflow-hidden">
+<h1 class="text-3xl md:text-5xl font-display text-retro-dark mb-4 uppercase">Projects Showcase</h1>
+<p class="text-retro-accent font-mono text-xl tracking-widest uppercase bg-retro-highlight inline-block px-4 py-1 border-2 border-retro-dark/20">Select a cartridge to view details</p>
+</div>
+</div>
+<section class="border-4 border-retro-dark bg-retro-paper relative shadow-pixel">
+<div class="absolute -top-2 -left-2 w-4 h-4 bg-retro-dark border-2 border-retro-paper"></div>
+<div class="absolute -top-2 -right-2 w-4 h-4 bg-retro-dark border-2 border-retro-paper"></div>
+<div class="absolute -bottom-2 -left-2 w-4 h-4 bg-retro-dark border-2 border-retro-paper"></div>
+<div class="absolute -bottom-2 -right-2 w-4 h-4 bg-retro-dark border-2 border-retro-paper"></div>
+<div class="flex flex-col lg:flex-row">
+<div class="w-full lg:w-3/5 relative h-64 lg:h-auto min-h-[400px] border-b-4 lg:border-b-0 lg:border-r-4 border-retro-dark bg-retro-dark">
+<div class="absolute inset-2 border-2 border-retro-paper/20">
+<div class="absolute inset-0 bg-cover bg-center pixel-art opacity-90" data-alt="Retro computer monitor displaying code in a dark room" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAZfgG5_PoP-RrGuJtUf0sLm1IjoSqPc6_903gvMhGF_u2vKa7DVTBR4LFCcvG6xz8iBgz-0MsZZOSM9R5DI7ZlGldd_xS90E0bIXRbywoGN3T8uing2j9cPS5duvIso7R_9apK6eGFYpnS6UYx8_l2AWhGhtJ7s3kOJYp2Sd5yOWNnvJigwRa5N_9G26kVLgiDA2lMZY-YKt_GahV6ISx5n7vPYSRNm3fJpW384SA3FF3nPdKa6k9SxVF_1YY4FS9EbyNoNWFO7fc'); mix-blend-mode: luminosity;">
+</div>
+<div class="absolute inset-0 bg-retro-accent/20 mix-blend-overlay"></div>
+<div class="absolute inset-0 scanlines opacity-30"></div>
+</div>
+<div class="absolute top-6 left-6 bg-retro-paper border-2 border-retro-dark px-3 py-1 text-xs font-bold text-retro-dark font-display uppercase tracking-wider shadow-pixel-sm">
+                            SELECTED_ITEM
+                        </div>
+</div>
+<div class="w-full lg:w-2/5 p-6 md:p-8 flex flex-col justify-between gap-6 bg-retro-paper">
+<div>
+<div class="flex items-center justify-between mb-4 border-b-2 border-retro-dark pb-2">
+<h2 class="text-2xl md:text-3xl font-display text-retro-dark uppercase">Retro Engine V2</h2>
+<span class="material-symbols-outlined text-retro-dark animate-spin">settings</span>
+</div>
+<p class="text-retro-dark text-lg md:text-xl leading-relaxed mb-6 font-mono border-l-4 border-retro-accent pl-4 bg-retro-highlight py-2 pr-2">
+                                A custom 2D game engine written in C++ for learning low-level memory management and rendering pipelines. Features include a custom sprite batcher.
+                            </p>
+<div class="grid grid-cols-2 gap-4 mb-8">
+<div class="bg-retro-paper border-2 border-retro-dark p-3 shadow-pixel-sm relative group hover:-translate-y-1 transition-transform">
+<div class="absolute -top-2 -right-2 bg-retro-dark text-retro-paper px-1">
+<span class="material-symbols-outlined text-[14px]">code</span>
+</div>
+<p class="text-sm text-retro-accent uppercase font-bold mb-1">Language</p>
+<p class="text-xl font-bold text-retro-dark">C++ / Lua</p>
+</div>
+<div class="bg-retro-paper border-2 border-retro-dark p-3 shadow-pixel-sm relative hover:-translate-y-1 transition-transform">
+<p class="text-sm text-retro-accent uppercase font-bold mb-1">Renderer</p>
+<p class="text-xl font-bold text-retro-dark">OpenGL / SDL</p>
+</div>
+<div class="bg-retro-paper border-2 border-retro-dark p-3 shadow-pixel-sm relative hover:-translate-y-1 transition-transform">
+<p class="text-sm text-retro-accent uppercase font-bold mb-1">Build</p>
+<p class="text-xl font-bold text-retro-dark">v2.4.1</p>
+</div>
+<div class="bg-retro-paper border-2 border-retro-dark p-3 shadow-pixel-sm relative hover:-translate-y-1 transition-transform">
+<p class="text-sm text-retro-accent uppercase font-bold mb-1">Size</p>
+<p class="text-xl font-bold text-retro-dark">45 MB</p>
+</div>
+</div>
+</div>
+<div class="flex gap-4 flex-col sm:flex-row">
+<button class="flex-1 bg-retro-accent hover:bg-retro-dark text-retro-paper font-display text-sm md:text-base h-14 flex items-center justify-center gap-3 transition-all active:translate-y-1 shadow-pixel border-2 border-retro-dark">
+<span class="material-symbols-outlined text-xl">play_arrow</span>
+                                START GAME
+                            </button>
+<button class="flex-1 bg-retro-paper hover:bg-retro-highlight text-retro-dark border-2 border-retro-dark font-display text-sm md:text-base h-14 flex items-center justify-center gap-3 transition-all active:translate-y-1 shadow-pixel">
+<span class="material-symbols-outlined text-xl">code</span>
+                                VIEW SOURCE
+                            </button>
+</div>
+</div>
+</div>
+</section>
+<section class="flex flex-col gap-6">
+<div class="flex flex-wrap gap-3 p-3 bg-retro-dark border-4 border-retro-dark rounded-lg shadow-pixel">
+<button class="px-4 py-2 bg-retro-paper text-retro-dark font-display text-xs md:text-sm uppercase tracking-wide border-2 border-retro-paper shadow-[inset_0_0_0_2px_#4a3b32]">
+                        ALL QUESTS
+                    </button>
+<button class="px-4 py-2 bg-retro-accent text-retro-paper hover:bg-retro-paper hover:text-retro-dark font-display text-xs md:text-sm uppercase tracking-wide border-2 border-transparent hover:border-retro-paper transition-all">
+                        FRONTEND
+                    </button>
+<button class="px-4 py-2 bg-retro-accent text-retro-paper hover:bg-retro-paper hover:text-retro-dark font-display text-xs md:text-sm uppercase tracking-wide border-2 border-transparent hover:border-retro-paper transition-all">
+                        BACKEND
+                    </button>
+<button class="px-4 py-2 bg-retro-accent text-retro-paper hover:bg-retro-paper hover:text-retro-dark font-display text-xs md:text-sm uppercase tracking-wide border-2 border-transparent hover:border-retro-paper transition-all">
+                        GAME DEV
+                    </button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="group relative bg-retro-paper border-4 border-retro-dark shadow-pixel hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all cursor-pointer flex flex-col h-full">
+<div class="aspect-video w-full bg-retro-dark relative border-b-4 border-retro-dark overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transform group-hover:scale-105 transition-transform duration-500" data-alt="Abstract shopping cart wireframe" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBxTVdYOAaGB1qlL7SXT0D9gYJ6jjjopUFEzc16w3ufmIbeYk4gvOzMK5T-RuD9dwBVpyaeVmCONMiouxna-dG1bbyUmaOvNzRLBTCvilgwostJRXdnje2hMLsQMeUrOejB0quUOtyr2g4ad12vG7SQYLuwjbpJEvzLQdHaOYpnK8aMEdrfwSq7_rNrDPXizk5AjZweFpmnI-tciS6d6jT5TE11NqfU-px4qw4JL_PdOdcx9sU9wgJ0NFJgGDIVPnHt8Di_yMAxIA4'); mix-blend-mode: luminosity;">
+</div>
+<div class="absolute inset-0 bg-retro-accent/30 mix-blend-color"></div>
+<div class="absolute top-2 right-2 bg-retro-paper border-2 border-retro-dark p-1">
+<span class="material-symbols-outlined text-retro-dark text-lg">shopping_cart</span>
+</div>
+</div>
+<div class="p-5 flex flex-col flex-grow">
+<h3 class="text-retro-dark text-lg font-display uppercase mb-2 group-hover:text-retro-accent">E-COMMERCE API</h3>
+<div class="flex gap-2 mb-3 flex-wrap">
+<span class="px-2 py-0.5 bg-retro-highlight border border-retro-dark text-xs font-bold text-retro-dark">Node.js</span>
+<span class="px-2 py-0.5 bg-retro-highlight border border-retro-dark text-xs font-bold text-retro-dark">MongoDB</span>
+</div>
+<p class="text-retro-dark/80 text-lg leading-tight mb-4 flex-grow font-mono">Scalable RESTful API for handling high-volume transaction data.</p>
+<div class="flex justify-between items-center mt-auto pt-3 border-t-2 border-retro-dark/20 border-dashed">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 bg-retro-green border border-retro-dark"></div>
+<span class="text-sm text-retro-dark font-bold uppercase">Active</span>
+</div>
+<span class="material-symbols-outlined text-retro-dark text-xl group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="group relative bg-retro-paper border-4 border-retro-dark shadow-pixel hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all cursor-pointer flex flex-col h-full">
+<div class="aspect-video w-full bg-retro-dark relative border-b-4 border-retro-dark overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transform group-hover:scale-105 transition-transform duration-500" data-alt="Pixelated weather icons" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBlJEGpmJU21JueNGlnD8cLChyHcSS9v8jVWIny-3crLVu8a5I7bNvfpVWvMEwXpxHbZQEhYFVaos-1vOp86WtkoCXFL47h-SY-LJR6x-qd5ZBj8LSQ5i17oFu3YjDxE3gJcA5BQCKi1g2Hlrh56_IE_AEbLRL0uosEePpnwvOSgAcxhkqpdGgN5Wv6ZDu6p_0ECE6_c9uZ6Kpzge_gCM3DCcA_9uTLXXuR_OCWCB2s56utQKEXA7Rjt_oC3ETVF7G69fh-8LGGR44'); mix-blend-mode: luminosity;">
+</div>
+<div class="absolute inset-0 bg-retro-blue/30 mix-blend-color"></div>
+<div class="absolute top-2 right-2 bg-retro-paper border-2 border-retro-dark p-1">
+<span class="material-symbols-outlined text-retro-dark text-lg">cloud</span>
+</div>
+</div>
+<div class="p-5 flex flex-col flex-grow">
+<h3 class="text-retro-dark text-lg font-display uppercase mb-2 group-hover:text-retro-accent">SKY_WATCH</h3>
+<div class="flex gap-2 mb-3 flex-wrap">
+<span class="px-2 py-0.5 bg-retro-highlight border border-retro-dark text-xs font-bold text-retro-dark">Vue.js</span>
+<span class="px-2 py-0.5 bg-retro-highlight border border-retro-dark text-xs font-bold text-retro-dark">Tailwind</span>
+</div>
+<p class="text-retro-dark/80 text-lg leading-tight mb-4 flex-grow font-mono">Real-time weather dashboard with historical data visualization.</p>
+<div class="flex justify-between items-center mt-auto pt-3 border-t-2 border-retro-dark/20 border-dashed">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 bg-retro-green border border-retro-dark"></div>
+<span class="text-sm text-retro-dark font-bold uppercase">Active</span>
+</div>
+<span class="material-symbols-outlined text-retro-dark text-xl group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="group relative bg-retro-paper border-4 border-retro-dark shadow-pixel hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all cursor-pointer flex flex-col h-full">
+<div class="aspect-video w-full bg-retro-dark relative border-b-4 border-retro-dark overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transform group-hover:scale-105 transition-transform duration-500" data-alt="Code editor snippet" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBo2309AorPfyrWZJ3r02SmuBA3utAAPetqMDm_qXUqGBkpuf4yWSPP8n2UaYk1whSPQ4OOA42l-eHiQ6YfY4QN7H3KAtFdje3QpZC1ez_pQsgUvLxBVXO-CuJCBu_fVRmV0Ngt4WgoGE4-V7hccU-xCEEUSbdxo3hqt2g8NIILU24mCETy6IS9E4FnDHVv4gSZ8xrm1J-V9Eco--o0cfVl7tDckjS4YRqMCmZUlWqR6XDOi6X8D6OdENgKKheXediV5ubQSpO5fZ8'); mix-blend-mode: luminosity;">
+</div>
+<div class="absolute inset-0 bg-retro-yellow/30 mix-blend-color"></div>
+<div class="absolute top-2 right-2 bg-retro-paper border-2 border-retro-dark p-1">
+<span class="material-symbols-outlined text-retro-dark text-lg">check_circle</span>
+</div>
+</div>
+<div class="p-5 flex flex-col flex-grow">
+<h3 class="text-retro-dark text-lg font-display uppercase mb-2 group-hover:text-retro-accent">TASK_TRACKER</h3>
+<div class="flex gap-2 mb-3 flex-wrap">
+<span class="px-2 py-0.5 bg-retro-highlight border border-retro-dark text-xs font-bold text-retro-dark">Python</span>
+<span class="px-2 py-0.5 bg-retro-highlight border border-retro-dark text-xs font-bold text-retro-dark">Django</span>
+</div>
+<p class="text-retro-dark/80 text-lg leading-tight mb-4 flex-grow font-mono">Productivity tool for engineering teams with automated sprint reports.</p>
+<div class="flex justify-between items-center mt-auto pt-3 border-t-2 border-retro-dark/20 border-dashed">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 bg-retro-yellow border border-retro-dark"></div>
+<span class="text-sm text-retro-dark font-bold uppercase">WIP</span>
+</div>
+<span class="material-symbols-outlined text-retro-dark text-xl group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="group relative bg-retro-paper border-4 border-retro-dark shadow-pixel hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all cursor-pointer flex flex-col h-full">
+<div class="aspect-video w-full bg-retro-dark relative border-b-4 border-retro-dark overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transform group-hover:scale-105 transition-transform duration-500" data-alt="Network connections visualization" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA9DqZ9thlaTmCEqUj7JCRYga47ppbX56WBqGpubZPNazfyRHQ0b1qJmro8IYkRx249V75elys2blE82Ec3KTUN83hDH08L0ULgXwTIhbk__weN4OSzlHxHEmCzWoA2U-n_kAcxPn3rLkqFINaf1goN3FD0j1FlkfaVIXHS2bUwTJ-OdyC-JK813nO4R8YzxvFTP9XP2fA-IoSTa8M8o6oJycZVd5a5zoH-SODKv-ec3z7KXoz3nkSzb8hxCCiFUleXDnS-GH7YU6I'); mix-blend-mode: luminosity;">
+</div>
+<div class="absolute inset-0 bg-retro-red/30 mix-blend-color"></div>
+<div class="absolute top-2 right-2 bg-retro-paper border-2 border-retro-dark p-1">
+<span class="material-symbols-outlined text-retro-dark text-lg">chat</span>
+</div>
+</div>
+<div class="p-5 flex flex-col flex-grow">
+<h3 class="text-retro-dark text-lg font-display uppercase mb-2 group-hover:text-retro-accent">CHAT_SERVER</h3>
+<div class="flex gap-2 mb-3 flex-wrap">
+<span class="px-2 py-0.5 bg-retro-highlight border border-retro-dark text-xs font-bold text-retro-dark">Go</span>
+<span class="px-2 py-0.5 bg-retro-highlight border border-retro-dark text-xs font-bold text-retro-dark">Redis</span>
+</div>
+<p class="text-retro-dark/80 text-lg leading-tight mb-4 flex-grow font-mono">High-concurrency chat server supporting 10k+ simultaneous connections.</p>
+<div class="flex justify-between items-center mt-auto pt-3 border-t-2 border-retro-dark/20 border-dashed">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 bg-retro-red border border-retro-dark"></div>
+<span class="text-sm text-retro-dark font-bold uppercase">Offline</span>
+</div>
+<span class="material-symbols-outlined text-retro-dark text-xl group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="group relative bg-retro-paper border-4 border-retro-dark shadow-pixel hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all cursor-pointer flex flex-col h-full">
+<div class="aspect-video w-full bg-retro-dark relative border-b-4 border-retro-dark overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transform group-hover:scale-105 transition-transform duration-500" data-alt="Motherboard circuit" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCo2f_3fhLyulyKBzX5Gye4thFf3P2_Mk0s01LIrXL3fltW_yDL6SQgAfXKx184wFBh1tJ0hEs5JSFhHhbCUbykiV4D8u4KLYUEmvHMWETkyI5VIONdruY4AaqPZkhBBq547rJejV5iBBMANk6DAsWpu8C-AZ-9lQmyThZGvjlqyTzW97L4NYXSbUi0GQg1JcyxT9btEtMTglz0BMorZXOu1SF-ihnwMOuGCmnMVCnh4nfcvSiWrpHbTCmIt2kT4igJFRjkO9p6hPc'); mix-blend-mode: luminosity;">
+</div>
+<div class="absolute inset-0 bg-retro-green/30 mix-blend-color"></div>
+<div class="absolute top-2 right-2 bg-retro-paper border-2 border-retro-dark p-1">
+<span class="material-symbols-outlined text-retro-dark text-lg">router</span>
+</div>
+</div>
+<div class="p-5 flex flex-col flex-grow">
+<h3 class="text-retro-dark text-lg font-display uppercase mb-2 group-hover:text-retro-accent">IOT_DASHBOARD</h3>
+<div class="flex gap-2 mb-3 flex-wrap">
+<span class="px-2 py-0.5 bg-retro-highlight border border-retro-dark text-xs font-bold text-retro-dark">React</span>
+<span class="px-2 py-0.5 bg-retro-highlight border border-retro-dark text-xs font-bold text-retro-dark">MQTT</span>
+</div>
+<p class="text-retro-dark/80 text-lg leading-tight mb-4 flex-grow font-mono">Control panel for smart home devices with real-time telemetry.</p>
+<div class="flex justify-between items-center mt-auto pt-3 border-t-2 border-retro-dark/20 border-dashed">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 bg-retro-green border border-retro-dark"></div>
+<span class="text-sm text-retro-dark font-bold uppercase">Active</span>
+</div>
+<span class="material-symbols-outlined text-retro-dark text-xl group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="group relative bg-retro-paper/50 border-4 border-retro-dark border-dashed flex flex-col h-full items-center justify-center p-8 opacity-80 hover:opacity-100 hover:border-solid hover:bg-retro-paper transition-all cursor-pointer">
+<div class="w-20 h-20 rounded-none border-4 border-retro-dark flex items-center justify-center mb-6 group-hover:bg-retro-accent group-hover:text-retro-paper transition-colors shadow-pixel-sm">
+<span class="material-symbols-outlined text-4xl">add</span>
+</div>
+<h3 class="text-retro-dark text-lg font-display uppercase text-center group-hover:text-retro-accent">NEW_PROJECT</h3>
+<p class="text-sm text-retro-dark/60 font-mono mt-2 text-center uppercase tracking-widest">Initialize...</p>
+</div>
+</div>
+</section>
+</div>
+</main>
+<footer class="bg-retro-dark border-t-4 border-retro-accent p-6 md:px-10 font-mono text-lg mt-auto">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+<div class="flex items-center gap-2 text-retro-paper/70">
+<span class="text-retro-paper font-bold">player1@retro-bytes:~$</span>
+<span class="typing-cursor">awaiting command...</span>
+<span class="w-3 h-5 bg-retro-paper animate-pulse inline-block align-middle"></span>
+</div>
+<div class="flex flex-wrap items-center gap-8 text-sm text-retro-paper uppercase tracking-wider">
+<a class="hover:text-retro-yellow hover:underline decoration-2 underline-offset-4 flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-lg">code_blocks</span> GitHub
+                </a>
+<a class="hover:text-retro-yellow hover:underline decoration-2 underline-offset-4 flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-lg">work</span> LinkedIn
+                </a>
+<a class="hover:text-retro-yellow hover:underline decoration-2 underline-offset-4 flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-lg">alternate_email</span> Contact
+                </a>
+<span class="bg-retro-accent px-2 py-1 text-retro-dark font-bold text-xs border border-retro-paper">V2.0 BUILD 2024</span>
+</div>
+</div>
+<div class="mt-8 text-center text-retro-paper/40 text-xs uppercase tracking-[0.2em]">
+            © 2024 Game Over. Insert Coin.
+        </div>
+</footer>
+
+</body></html>

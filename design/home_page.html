@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Player 1 Profile - Software Engineer</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#8c5a3c",
+              "primary-hover": "#a06b4a",
+              "bg-retro": "#ccb09c",
+              "panel-retro": "#fef6e4",
+              "border-retro": "#594030",
+              "text-main": "#4a3426",
+              "text-muted": "#7c6a5a",
+              "accent-green": "#7ebc69",
+              "accent-blue": "#5fcde4",
+              "accent-red": "#d95763",
+              "accent-yellow": "#d7b54a",
+            },
+            fontFamily: {
+              display: ["'VT323'", "monospace"],
+              mono: ["'VT323'", "monospace"],
+              sans: ["'VT323'", "monospace"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              sm: "0.125rem",
+              md: "0.375rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            boxShadow: {
+              retro: "4px 4px 0px 0px rgba(89, 64, 48, 0.2)",
+              "retro-card": "4px 4px 0px 0px rgba(89, 64, 48, 0.15)",
+              "retro-btn": "3px 3px 0px 0px rgba(60, 40, 30, 1)",
+              "retro-btn-hover": "1px 1px 0px 0px rgba(60, 40, 30, 1)",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .bg-grid-pattern {
+        background-color: #ccb09c;
+        background-image: linear-gradient(
+            rgba(89, 64, 48, 0.15) 1px,
+            transparent 1px
+          ),
+          linear-gradient(90deg, rgba(89, 64, 48, 0.15) 1px, transparent 1px);
+        background-size: 30px 30px;
+      }
+      img,
+      .pixel-art {
+        image-rendering: pixelated;
+      }
+      ::-webkit-scrollbar {
+        width: 12px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #ccb09c;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #8c5a3c;
+        border: 2px solid #ccb09c;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #594030;
+      }
+    </style>
+  </head>
+  <body
+    class="relative flex min-h-screen w-full flex-col bg-grid-pattern font-display text-text-main overflow-x-hidden selection:bg-primary selection:text-white"
+  >
+    <div class="layout-container flex h-full grow flex-col relative z-10">
+      <header
+        class="sticky top-0 z-40 flex items-center justify-between whitespace-nowrap border-b-2 border-solid border-border-retro bg-panel-retro/95 backdrop-blur-sm px-4 md:px-10 py-3 shadow-retro-card"
+      >
+        <div class="flex items-center gap-4 text-text-main">
+          <div
+            class="size-8 flex items-center justify-center text-primary bg-bg-retro border border-border-retro rounded-sm"
+          >
+            <span class="material-symbols-outlined text-2xl">terminal</span>
+          </div>
+          <h2
+            class="text-text-main text-2xl font-bold leading-tight tracking-wider uppercase"
+          >
+            Player 1 // Profile
+          </h2>
+        </div>
+        <div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+          <nav class="flex items-center gap-6">
+            <a
+              class="text-text-main/70 hover:text-primary transition-colors text-lg font-bold leading-normal uppercase tracking-wide hover:underline decoration-2 underline-offset-4"
+              href="#"
+              >Stats</a
+            >
+            <a
+              class="text-text-main/70 hover:text-primary transition-colors text-lg font-bold leading-normal uppercase tracking-wide hover:underline decoration-2 underline-offset-4"
+              href="#"
+              >Inventory</a
+            >
+            <a
+              class="text-text-main/70 hover:text-primary transition-colors text-lg font-bold leading-normal uppercase tracking-wide hover:underline decoration-2 underline-offset-4"
+              href="#"
+              >Quests</a
+            >
+            <a
+              class="text-text-main/70 hover:text-primary transition-colors text-lg font-bold leading-normal uppercase tracking-wide hover:underline decoration-2 underline-offset-4"
+              href="#"
+              >Lore</a
+            >
+          </nav>
+          <button
+            class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-sm bg-primary border-2 border-border-retro hover:translate-y-0.5 hover:shadow-retro-btn-hover hover:bg-primary-hover transition-all h-10 px-4 text-panel-retro text-lg font-bold leading-normal tracking-wide uppercase shadow-retro-btn"
+          >
+            <span class="truncate flex items-center gap-2">
+              <span class="material-symbols-outlined text-[20px]"
+                >power_settings_new</span
+              >
+              Connect
+            </span>
+          </button>
+        </div>
+        <button class="md:hidden text-text-main">
+          <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+      </header>
+      <main class="flex-1 px-4 md:px-10 lg:px-40 py-8 flex justify-center">
+        <div
+          class="layout-content-container flex flex-col max-w-[1100px] flex-1 gap-8"
+        >
+          <div
+            class="flex flex-col gap-2 border-b-2 border-border-retro border-dashed pb-6"
+          >
+            <div class="flex items-center gap-3 text-primary">
+              <span class="material-symbols-outlined animate-pulse"
+                >sports_esports</span
+              >
+              <p class="text-lg font-bold uppercase tracking-widest">
+                System Ready
+              </p>
+            </div>
+            <h1
+              class="text-text-main text-5xl md:text-6xl font-bold leading-none tracking-tight uppercase drop-shadow-sm"
+            >
+              Choose Your Configuration
+            </h1>
+            <p
+              class="text-text-muted text-xl font-normal leading-normal max-w-2xl"
+            >
+              Select a profile to view technical specifications, completed
+              quests, and inventory items.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
+            <div class="lg:col-span-4 flex flex-col gap-6">
+              <div
+                class="flex flex-col bg-panel-retro border-2 border-border-retro rounded-sm overflow-hidden shadow-retro-card group"
+              >
+                <div
+                  class="relative w-full aspect-square bg-bg-retro flex items-center justify-center border-b-2 border-border-retro overflow-hidden p-4"
+                >
+                  <div
+                    class="w-full h-full bg-cover bg-center border-2 border-border-retro rounded-sm shadow-sm"
+                    data-alt="Pixel art style portrait of a programmer working at a computer terminal"
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAdmvy6FIJc1it9ALIk4Hsyg9dUiuPnFxPYYnjTY9dXTwhbRPxHA3zuLTAoF21hAWyQSonPG73B8-o7_eqqSABfvX9sN-ljV-adux0uBw3hS3SzZnR5_RPGfyjpql9rcPzq39hSR6j6phteWqYqvZ0HDmuOVlcO8po-d9rFjNnOzjEsrmaIHDUc9sVWYq9-K_6ug-aE7dT26eXntlJliAfshUmP5ILs_Mm4XNuhgLSrTL5J3emrH7CqIVNl8C7hXhjApgIqrrR8WjQ');
+                      image-rendering: pixelated;
+                    "
+                  ></div>
+                  <div
+                    class="absolute bottom-6 right-6 bg-panel-retro/90 backdrop-blur-sm px-2 py-1 rounded-sm border-2 border-border-retro shadow-retro-btn"
+                  >
+                    <p
+                      class="text-base font-bold text-accent-green animate-pulse"
+                    >
+                      ● ONLINE
+                    </p>
+                  </div>
+                </div>
+                <div class="p-5 flex flex-col gap-3">
+                  <div>
+                    <h2
+                      class="text-text-main text-3xl font-bold uppercase tracking-tight"
+                    >
+                      Alex The Coder
+                    </h2>
+                    <p
+                      class="text-primary text-xl font-bold tracking-wide uppercase"
+                    >
+                      Lvl. 05 Engineer
+                    </p>
+                  </div>
+                  <div
+                    class="h-0.5 bg-border-retro/20 w-full border-t border-dashed border-border-retro"
+                  ></div>
+                  <div class="flex flex-col gap-2 text-lg text-text-muted">
+                    <div class="flex justify-between">
+                      <span>Class:</span>
+                      <span class="text-text-main font-bold"
+                        >Full-Stack Mage</span
+                      >
+                    </div>
+                    <div class="flex justify-between">
+                      <span>Guild:</span>
+                      <span class="text-text-main font-bold">Freelance</span>
+                    </div>
+                    <div class="flex justify-between">
+                      <span>Server:</span>
+                      <span class="text-text-main font-bold">US-East</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex flex-col bg-panel-retro border-2 border-border-retro rounded-sm p-3 gap-2 shadow-retro-card"
+              >
+                <button
+                  class="flex items-center gap-3 px-4 py-3 rounded-sm hover:bg-bg-retro border border-transparent hover:border-border-retro transition-all group text-left"
+                >
+                  <span
+                    class="material-symbols-outlined text-text-muted group-hover:text-primary"
+                    >visibility</span
+                  >
+                  <div class="flex flex-col">
+                    <span class="text-text-main text-lg font-bold uppercase"
+                      >View Source Code</span
+                    >
+                    <span class="text-text-muted text-base leading-none"
+                      >Analyze github repos</span
+                    >
+                  </div>
+                </button>
+                <button
+                  class="flex items-center gap-3 px-4 py-3 rounded-sm bg-primary/10 border-2 border-primary hover:bg-primary/20 transition-colors group text-left"
+                >
+                  <span class="material-symbols-outlined text-primary"
+                    >mail</span
+                  >
+                  <div class="flex flex-col">
+                    <span class="text-text-main text-lg font-bold uppercase"
+                      >Send Scroll</span
+                    >
+                    <span class="text-text-muted text-base leading-none"
+                      >Initiate communication</span
+                    >
+                  </div>
+                </button>
+                <button
+                  class="flex items-center gap-3 px-4 py-3 rounded-sm hover:bg-bg-retro border border-transparent hover:border-border-retro transition-all group text-left"
+                >
+                  <span
+                    class="material-symbols-outlined text-text-muted group-hover:text-primary"
+                    >download</span
+                  >
+                  <div class="flex flex-col">
+                    <span class="text-text-main text-lg font-bold uppercase"
+                      >Export Data</span
+                    >
+                    <span class="text-text-muted text-base leading-none"
+                      >Download Resume.pdf</span
+                    >
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div class="lg:col-span-8 flex flex-col gap-6">
+              <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div
+                  class="bg-panel-retro border-2 border-border-retro p-3 rounded-sm flex flex-col items-center justify-center text-center shadow-retro-card hover:-translate-y-1 transition-transform cursor-default"
+                >
+                  <span
+                    class="material-symbols-outlined text-primary mb-1 text-3xl"
+                    >code</span
+                  >
+                  <p class="text-3xl font-bold leading-none text-text-main">
+                    99+
+                  </p>
+                  <p
+                    class="text-base uppercase text-text-muted tracking-wider mt-1"
+                  >
+                    Commits
+                  </p>
+                </div>
+                <div
+                  class="bg-panel-retro border-2 border-border-retro p-3 rounded-sm flex flex-col items-center justify-center text-center shadow-retro-card hover:-translate-y-1 transition-transform cursor-default"
+                >
+                  <span
+                    class="material-symbols-outlined text-primary mb-1 text-3xl"
+                    >coffee</span
+                  >
+                  <p class="text-3xl font-bold leading-none text-text-main">
+                    ∞24
+                  </p>
+                  <p
+                    class="text-base uppercase text-text-muted tracking-wider mt-1"
+                  >
+                    Caffeine Lvl
+                  </p>
+                </div>
+                <div
+                  class="bg-panel-retro border-2 border-border-retro p-3 rounded-sm flex flex-col items-center justify-center text-center shadow-retro-card hover:-translate-y-1 transition-transform cursor-default"
+                >
+                  <span
+                    class="material-symbols-outlined text-primary mb-1 text-3xl"
+                    >bug_report</span
+                  >
+                  <p class="text-3xl font-bold leading-none text-text-main">
+                    0
+                  </p>
+                  <p
+                    class="text-base uppercase text-text-muted tracking-wider mt-1"
+                  >
+                    Critical Bugs
+                  </p>
+                </div>
+                <div
+                  class="bg-panel-retro border-2 border-border-retro p-3 rounded-sm flex flex-col items-center justify-center text-center shadow-retro-card hover:-translate-y-1 transition-transform cursor-default"
+                >
+                  <span
+                    class="material-symbols-outlined text-primary mb-1 text-3xl"
+                    >timer</span
+                  >
+                  <p class="text-3xl font-bold leading-none text-text-main">
+                    5y
+                  </p>
+                  <p
+                    class="text-base uppercase text-text-muted tracking-wider mt-1"
+                  >
+                    Play Time
+                  </p>
+                </div>
+              </div>
+              <div
+                class="bg-panel-retro border-2 border-border-retro rounded-sm p-6 shadow-retro-card"
+              >
+                <div class="flex items-center justify-between mb-6">
+                  <h3
+                    class="text-2xl font-bold uppercase flex items-center gap-2 text-text-main"
+                  >
+                    <span
+                      class="material-symbols-outlined text-primary text-3xl"
+                      >bar_chart</span
+                    >
+                    Attribute Points
+                  </h3>
+                  <span
+                    class="text-lg font-bold font-mono text-primary bg-bg-retro border border-border-retro px-2 py-1 rounded-sm shadow-sm"
+                    >ver 2.0.4</span
+                  >
+                </div>
+                <div class="flex flex-col gap-5">
+                  <div class="flex flex-col gap-1">
+                    <div
+                      class="flex justify-between text-lg uppercase font-bold"
+                    >
+                      <span class="text-text-main"
+                        >Intelligence (Python/Backend)</span
+                      >
+                      <span class="text-primary">90/100</span>
+                    </div>
+                    <div
+                      class="h-6 w-full bg-bg-retro rounded-sm p-1 border-2 border-border-retro shadow-inner"
+                    >
+                      <div
+                        class="h-full bg-accent-blue w-[90%] border-r-2 border-border-retro relative overflow-hidden"
+                      >
+                        <div
+                          class="absolute inset-0 bg-[linear-gradient(90deg,transparent_0%,rgba(255,255,255,0.4)_50%,transparent_100%)] animate-[shimmer_2s_infinite]"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <div
+                      class="flex justify-between text-lg uppercase font-bold"
+                    >
+                      <span class="text-text-main"
+                        >Agility (React/Frontend)</span
+                      >
+                      <span class="text-primary">95/100</span>
+                    </div>
+                    <div
+                      class="h-6 w-full bg-bg-retro rounded-sm p-1 border-2 border-border-retro shadow-inner"
+                    >
+                      <div
+                        class="h-full bg-accent-green w-[95%] border-r-2 border-border-retro relative overflow-hidden"
+                      >
+                        <div
+                          class="absolute inset-0 bg-[linear-gradient(90deg,transparent_0%,rgba(255,255,255,0.4)_50%,transparent_100%)] animate-[shimmer_2s_infinite]"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <div
+                      class="flex justify-between text-lg uppercase font-bold"
+                    >
+                      <span class="text-text-main">Stamina (DevOps/CI/CD)</span>
+                      <span class="text-primary">75/100</span>
+                    </div>
+                    <div
+                      class="h-6 w-full bg-bg-retro rounded-sm p-1 border-2 border-border-retro shadow-inner"
+                    >
+                      <div
+                        class="h-full bg-accent-yellow w-[75%] border-r-2 border-border-retro relative overflow-hidden"
+                      >
+                        <div
+                          class="absolute inset-0 bg-[linear-gradient(90deg,transparent_0%,rgba(255,255,255,0.4)_50%,transparent_100%)] animate-[shimmer_2s_infinite]"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <div
+                      class="flex justify-between text-lg uppercase font-bold"
+                    >
+                      <span class="text-text-main"
+                        >Charisma (UI/UX Design)</span
+                      >
+                      <span class="text-primary">85/100</span>
+                    </div>
+                    <div
+                      class="h-6 w-full bg-bg-retro rounded-sm p-1 border-2 border-border-retro shadow-inner"
+                    >
+                      <div
+                        class="h-full bg-accent-red w-[85%] border-r-2 border-border-retro relative overflow-hidden"
+                      >
+                        <div
+                          class="absolute inset-0 bg-[linear-gradient(90deg,transparent_0%,rgba(255,255,255,0.4)_50%,transparent_100%)] animate-[shimmer_2s_infinite]"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col gap-4">
+                <h3
+                  class="text-2xl font-bold uppercase flex items-center gap-2 px-1 text-text-main"
+                >
+                  <span class="material-symbols-outlined text-primary text-3xl"
+                    >backpack</span
+                  >
+                  Inventory (Projects)
+                </h3>
+                <div
+                  class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+                >
+                  <div
+                    class="group bg-panel-retro border-2 border-border-retro rounded-sm hover:border-primary transition-colors p-4 flex flex-col gap-3 cursor-pointer shadow-retro-card"
+                  >
+                    <div
+                      class="h-32 rounded-sm bg-cover bg-center border-2 border-border-retro group-hover:opacity-90"
+                      data-alt="Screenshot of a code editor showing react components"
+                      style="
+                        background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCH95pMbiGOeLWl6KCRTnDNEXtOaRVXUrtM-kDVo_O_6Sx2t9fw8uwvlm0l5kMaOMocLfi2u5OkTwNdL2HPaY45MlnSIv1s4R_9Ngpl7m-0TGsbj2eLHDv788WT2JEQu3jtVXE1J0asZUtHn5zkkd3Xv7cdbb7Ayy1xJtCOBAtW4mxy4n4HXBbnOpJp80nsrB8Jctan8i0jkW2sz768PaXYHJj8CuITp39B-uaazVwwPwhbx_c3Al9MorNtVjnejH6t5gHPHF5ypJo');
+                      "
+                    ></div>
+                    <div>
+                      <h4 class="text-text-main font-bold text-xl uppercase">
+                        E-Com Platform
+                      </h4>
+                      <p class="text-text-muted text-base mt-1">
+                        Next.js, Stripe, Tailwind
+                      </p>
+                    </div>
+                    <div class="mt-auto flex justify-end">
+                      <span
+                        class="text-sm bg-accent-yellow/20 border border-accent-yellow text-text-main px-2 py-0.5 rounded-sm uppercase font-bold"
+                        >Legendary</span
+                      >
+                    </div>
+                  </div>
+                  <div
+                    class="group bg-panel-retro border-2 border-border-retro rounded-sm hover:border-primary transition-colors p-4 flex flex-col gap-3 cursor-pointer shadow-retro-card"
+                  >
+                    <div
+                      class="h-32 rounded-sm bg-cover bg-center border-2 border-border-retro group-hover:opacity-90"
+                      data-alt="Abstract visualization of a neural network or AI nodes"
+                      style="
+                        background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBJlmxxqqQbBMJEhImvtnh8uyXIMoIZI5t6YXjQ27OEl9F73LlYFqEaW4JyMWbG4G1kjlLsK2gsvQoFGw9izNAvUdJB2f37mTQ5VGFIL_VdaUJslC_EL4c4yBjgdpCAQrhk4td2qFQDjpqoFTLfvFZnXZOTWOB1nnnBz-qwsZpBPVLfncVF2bNM94nzSfk0JHqTIw8tDn442r1ojIUDkSoQUsNqYbeADpODdGPGlmih-3mozlkFfJrLQUC3TQmB0_VxYyTiJLUlt3E');
+                      "
+                    ></div>
+                    <div>
+                      <h4 class="text-text-main font-bold text-xl uppercase">
+                        AI Chat Bot
+                      </h4>
+                      <p class="text-text-muted text-base mt-1">
+                        Python, OpenAI, WebSocket
+                      </p>
+                    </div>
+                    <div class="mt-auto flex justify-end">
+                      <span
+                        class="text-sm bg-purple-500/20 border border-purple-500 text-text-main px-2 py-0.5 rounded-sm uppercase font-bold"
+                        >Epic</span
+                      >
+                    </div>
+                  </div>
+                  <div
+                    class="group bg-panel-retro border-2 border-border-retro rounded-sm hover:border-primary transition-colors p-4 flex flex-col gap-3 cursor-pointer shadow-retro-card"
+                  >
+                    <div
+                      class="h-32 rounded-sm bg-cover bg-center border-2 border-border-retro group-hover:opacity-90"
+                      data-alt="Dashboard interface with charts and graphs"
+                      style="
+                        background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCtGdBZOCJsp6vi-EB6eMvH1kZ19rBp3JHny9B9ot0zGFgm8tYo3XlEbInx5Z1IXQ1VaDUjzj1TZawmk5dGDUZX0rPNULcVURvJD7Od2nDOme7CwHRVVvhr1t7dI2ZQmV7xJL1eEWMBiWL-IYaKdlTSbXuanLkm5rf-3nH7vb0PFH_U3FoEJ8NiXIHK2E9B4QN1NEfyLndjWG-yaNzPN6JG6pziChzJzEkRP6JgjURmtGXCqExUByTkiXf8VZsAiegdyR3-Cgug7nQ');
+                      "
+                    ></div>
+                    <div>
+                      <h4 class="text-text-main font-bold text-xl uppercase">
+                        Crypto Dash
+                      </h4>
+                      <p class="text-text-muted text-base mt-1">
+                        Vue.js, D3.js, Firebase
+                      </p>
+                    </div>
+                    <div class="mt-auto flex justify-end">
+                      <span
+                        class="text-sm bg-accent-blue/20 border border-accent-blue text-text-main px-2 py-0.5 rounded-sm uppercase font-bold"
+                        >Rare</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bg-panel-retro border-2 border-border-retro rounded-sm p-6 shadow-retro-card"
+              >
+                <h3
+                  class="text-2xl font-bold uppercase flex items-center gap-2 mb-6 text-text-main"
+                >
+                  <span class="material-symbols-outlined text-primary text-3xl"
+                    >explore</span
+                  >
+                  Quest Log
+                </h3>
+                <div class="flex flex-col gap-6">
+                  <div class="flex gap-4 items-start">
+                    <div class="mt-1">
+                      <span
+                        class="material-symbols-outlined text-accent-yellow text-3xl"
+                        >stars</span
+                      >
+                    </div>
+                    <div class="flex-1">
+                      <h4 class="text-text-main font-bold text-xl uppercase">
+                        Main Quest: Senior Engineer at TechCorp
+                      </h4>
+                      <p class="text-text-muted text-lg mt-1 leading-relaxed">
+                        Currently leading the frontend guild. Optimized
+                        rendering engines by 40%. Mentoring 3 junior mages.
+                      </p>
+                      <div class="flex gap-2 mt-2">
+                        <span
+                          class="text-base border border-border-retro bg-bg-retro px-2 py-0.5 rounded-sm text-text-muted"
+                          >2021 - Present</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="h-0.5 bg-border-retro/30 border-t border-dashed border-border-retro w-full ml-12"
+                  ></div>
+                  <div
+                    class="flex gap-4 items-start opacity-70 hover:opacity-100 transition-opacity"
+                  >
+                    <div class="mt-1">
+                      <span
+                        class="material-symbols-outlined text-accent-green text-3xl"
+                        >check_circle</span
+                      >
+                    </div>
+                    <div class="flex-1">
+                      <h4
+                        class="text-text-main font-bold text-xl uppercase decoration-slice"
+                      >
+                        Side Quest: Freelance Developer
+                      </h4>
+                      <p class="text-text-muted text-lg mt-1 leading-relaxed">
+                        Completed 15+ contracts for various merchants. Delivered
+                        high-quality loot (websites) on time.
+                      </p>
+                      <div class="flex gap-2 mt-2">
+                        <span
+                          class="text-base border border-border-retro bg-bg-retro px-2 py-0.5 rounded-sm text-text-muted"
+                          >2019 - 2021</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer
+        class="sticky bottom-0 z-40 bg-panel-retro border-t-2 border-border-retro px-4 py-2 flex items-center justify-between text-base font-bold uppercase tracking-wider text-text-muted shadow-[0_-4px_0px_rgba(89,64,48,0.1)]"
+      >
+        <div class="flex items-center gap-4 md:gap-8">
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-lg text-accent-red"
+              >favorite</span
+            >
+            <span>HP: 100%</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-lg text-accent-blue"
+              >water_drop</span
+            >
+            <span>MP: 85%</span>
+          </div>
+          <div class="hidden md:flex items-center gap-2">
+            <span class="material-symbols-outlined text-lg text-accent-green"
+              >wifi</span
+            >
+            <span>Connected</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-lg text-primary"
+            >public</span
+          >
+          <span>Loc: Internet</span>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -34,3 +34,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Ignore IDE specific files
+.vscode/
+CLAUDE.md
+.claude/
+
+#Ignore documentation not tracker
+documents/plan/
+documents/guidlines/
