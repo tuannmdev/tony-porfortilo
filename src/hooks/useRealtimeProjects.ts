@@ -1,12 +1,20 @@
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import { useQueryClient } from "@tanstack/react-query";
 import { createClient } from "@/lib/supabase/client";
 
 export function useRealtimeProjects() {
   const queryClient = useQueryClient();
-  const supabase = createClient();
+
+  // Lazy initialize Supabase client only on client-side
+  const supabase = useMemo(() => {
+    if (typeof window === "undefined") return null;
+    return createClient();
+  }, []);
 
   useEffect(() => {
+    // Skip if not on client-side or if client creation failed
+    if (!supabase) return;
+
     const channel = supabase
       .channel("projects-changes")
       .on(
