@@ -81,12 +81,12 @@ export default function ContactForm() {
 
       {/* Title */}
       <h1 className="text-border-retro text-4xl lg:text-6xl font-black leading-none tracking-tight uppercase drop-shadow-sm font-display">
-        Let's Connect!
+        Let&apos;s Connect!
       </h1>
 
       {/* Description */}
       <p className="text-border-retro/80 text-xl font-display leading-normal max-w-md mt-2 mb-6">
-        I'm currently accepting new quests. Send a transmission below to initiate handshake protocol.
+        I&apos;m currently accepting new quests. Send a transmission below to initiate handshake protocol.
       </p>
 
       {/* Form */}
